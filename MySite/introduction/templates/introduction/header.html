@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    {% block head %} {% endblock %}
+    <meta charset=utf-8 />
+    <meta name="description" content="GSoC2016 introduction site">
+    <meta name="keywords" content="Google, Summer, of, Code, GSoC, 2016">
+    <meta name="author" content="Ács Raymund">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'introduction/css/style.css' %}" />
+    <meta charset="UTF-8">
+    <title>{% block title %}GSoC2016{% endblock %}</title>
+</head>
+<body>
+
+    <div id="full-width-cont">
+
+        <div id="filler"></div>
+        {% block background %} {% endblock %}
+        <div id="header">
+            <div id="header-container">
+                <div id="logo">
+                    <span class="extrabold logo"> {% block logo1 %} syslog-ng {% endblock %} </span>
+                    <span class="light logo"> {% block logo2 %} ConfigCreator {% endblock %} </span>
+                </div>
+                <div id="navigation">
+                    <ul>
+                        <li>
+                            <a href="{% url 'introduction:indexUrl' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'introduction:aboutUrl' %}">About</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'introduction:timelineUrl' %}">TimeLine</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'introduction:exampleUrl' %}">Example</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content-container">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+
+    </div>
+</body>
