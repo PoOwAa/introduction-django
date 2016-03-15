@@ -7,7 +7,61 @@
             <span class="introtext">Google Summer of Code 2016</span>
         </div>
     </div>
+{% endblock %}
+{% block content %}
+    <div id="panel">
 
 
+        <h1>Abstract:</h1>
+        <p>
+            The syslog-ng application is a flexible and highly scalable system logging application that is ideal for creating centralized and trusted logging solutions. While it's professional for administrators, it can be hard to use for people, who aren't experienced in it or haven't gone through the documentation. My aim is to help new users with an user-friendly web interface, which can quickly and correctly create the syslog configuration file.
+        </p>
+
+        <h1>Project goals:</h1>
+        <p>
+            A user-friendly web app for creating syslog-ng configuration file which will enable to easily create configuration file with drag&drop technique. The project is finished when people who are new with syslog-ng can set up a fully working configuration file by their needs.
+        </p>
+
+        <h1>Implementation:</h1>
+
+        <p>
+            I would like to implement the whole project in Django with python 2.7.x (If project needs it can be 3.4.x).
+            Django was designed to develop as quickly as possible and it uses python, which is one of my favorite language.
+            For Django project I will use PyCharm IDE, which supports the latest Django versions.
+        </p>
+        <p>
+            The design would follow the 2016's trends, like responsivity, flat minimal design.
+            There will be many tooltips and descriptions guiding the user to better understand the configuration process.
+            Log statement could be created by drag and drop in the necessary component objects.
+        </p>
+        <p>
+            For yaml files it will use JS-YAML which is under license of MIT.
+        </p>
+        <p>
+            If community needs, the app can save the configurations server-side and people can share them with each other, these files can be templates.
+        </p>
+        <p>
+            I would like to follow the RERO software development philosophy, and the concepts of the agile software development methods.
+        </p>
+        <p>
+            The final project will be licensed under the GPL license, and will include a graphical tool, it's documentation, and a user guide.
+        </p>
+
+        <h1>Benefits:</h1>
+
+        <p>
+            Using the GUI, users can easily generate syslog-ng configuration file. Syslog-ng has powerful configuration language therefore it's bit difficult to create configuration file manually without experience. This project helps users to create configuration file very easily using drag&drop technique.
+
+            Web-based implementation is more user-friendly than native implementation. Users don't need to worry about compatibility and installation of application, because they just enter the url and follow the instructions, so they can focus the most important things by their needs.
+        </p>
+
+        <h1>About me:</h1>
+
+        <p>
+            My name is Raymund Ács, I am an undergraduate student at the University of Debrecen studying Software Information Technology. I am experienced in the field of working in bigger groups and using distributed version control systems, like svn or git, for instance during the time of the UDProg project (The Yearbook of the Programmers of University of Debrecen) I have used git along with 304 contributors. We have used C, C++, Java, Python to write applications.
+
+On my GitHub page for now there is only one project, which is an introductory website made with Django framework. It contains a throwaway prototype of drag and drop solution.
+        </p>
+    </div>
 {% endblock %}
 

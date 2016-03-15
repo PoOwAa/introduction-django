@@ -8,45 +8,99 @@
     <meta name="keywords" content="Google, Summer, of, Code, GSoC, 2016">
     <meta name="author" content="Ács Raymund">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{% static 'introduction/css/style.css' %}" />
     <meta charset="UTF-8">
     <title>{% block title %}GSoC2016{% endblock %}</title>
 </head>
 <body>
 
-    <div id="full-width-cont">
+<div id="full-width-cont">
 
-        <div id="filler"></div>
-        {% block background %} {% endblock %}
-        <div id="header">
-            <div id="header-container">
-                <div id="logo">
+    <div id="filler"></div>
+    {% block background %} {% endblock %}
+    <div id="header">
+        <div id="header-container">
+            <div id="logo">
+                <a href="{% url 'introduction:indexUrl' %}">
                     <span class="extrabold logo"> {% block logo1 %} syslog-ng {% endblock %} </span>
                     <span class="light logo"> {% block logo2 %} ConfigCreator {% endblock %} </span>
-                </div>
-                <div id="navigation">
-                    <ul>
-                        <li>
-                            <a href="{% url 'introduction:indexUrl' %}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'introduction:aboutUrl' %}">About</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'introduction:timelineUrl' %}">TimeLine</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'introduction:exampleUrl' %}">Example</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div id="content">
-            <div id="content-container">
-                {% block content %} {% endblock %}
-            </div>
-        </div>
+                </a>
 
+            </div>
+            <div id="navigation">
+                <ul>
+                    <li>
+                        <a href="{% url 'introduction:indexUrl' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'introduction:timelineUrl' %}">TimeLine</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'introduction:exampleUrl' %}">Example</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    {% block header2 %} {% endblock %}
+
+    <div id="content">
+        <div id="content-container">
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+
+
+
+    <div id="footer">
+        <div id="footer-container">
+            <div class="footer-row">
+                <ul>
+                    <li class="footer-title">
+                        SiteMap
+                    </li>
+                    <li class="light footer-text">
+                        <a href="{% url 'introduction:indexUrl' %}">HOME</a>
+                    </li>
+                    <li class="light footer-text">
+                        <a href="{% url 'introduction:timelineUrl' %}">TIMELINE</a>
+                    </li>
+                    <li class="light footer-text">
+                        <a href="{% url 'introduction:exampleUrl' %}">EXAMPLE</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-row">
+                <ul>
+                    <li class="footer-title">
+                        Contact
+                    </li>
+                    <li class="light footer-text ">
+                        <span class="icon icon-ppl invert"></span> Raymund Ács
+                    </li>
+                    <li class="light footer-text">
+                        <span class="icon icon-phone invert"></span> +36 70 365 67 91
+                    </li>
+                    <li class="light footer-text">
+                        <a href="mailto:raycsucsu@gmail.com"><span class="icon icon-mail invert"></span></a> raycsucsu@gmail.com
+                    </li>
+                    <li class="light footer-text">
+                        <a href="http://www.github.com/poowaa"><span class="icon icon-git invert"></span></a> http://www.github.com/poowaa
+                    </li>
+                    <li class="light footer-text">
+                        <a href="http://www.linkedin.com/in/acsraymund"><span class="icon icon-in invert"></span></a> https://www.linkedin.com/in/acsraymund
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <div id="copyright-container">
+            <div class="centered white">© 2016 Ács Raymund. All rights reserved.</div>
+        </div>
+    </div>
+
+</div>
 </body>
