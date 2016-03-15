@@ -2,25 +2,33 @@
 {% block title %}Example{% endblock %}
 {% block head %}{% load staticfiles%}{% endblock %}
 {% block content %}
-    <br />
+<div id="panel">
     <form id="upload" action="upload.php" method="POST" enctype="multipart/form-data">
 
-                  <div id="fileDrag" >
-                      Drop files here
-                  </div>
+        <div id="fileDrag" >
+            Drop files here
+        </div>
 
-            <label for="fileSelect">Files to upload:</label>
-            <input type="file" id="fileSelect" name="fileSelect[]" multiple="multiple"/>
-            <div id="submitButton">
-                <button type="submit">Upload files</button>
-            </div>
+
+        <p class="light" style="text-align: center; font-size: 1.5em;">
+            If you don't like drag & drop use the oldschool file upload!
+        </p>
+        <label for="fileSelect">Files to upload:</label>
+        <input type="file" id="fileSelect" name="fileSelect[]" multiple="multiple"/>
+        <div id="submitButton">
+            <button type="submit">Upload files</button>
+
+        </div>
+
+
 
     </form>
 
     <div id="messages">
         <p>Status Messages</p>
     </div>
-    <script src="{% static 'introduction/js/dnd.js' %}"></script>
+</div>
+<script src="{% static 'introduction/js/dnd.js' %}"></script>
 {% endblock %}
 
 
